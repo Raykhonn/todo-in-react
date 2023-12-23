@@ -31,8 +31,8 @@ export default function App(): JSX.Element {
   };
 
   return (
-    <div>
-      <div className="max-w-[1000px] mx-auto bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 shadow-lg rounded-lg overflow-hidden mt-16">
+    <div className="max-w-[1000px] mx-auto mt-16">
+      <div className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 shadow-lg rounded-lg overflow-hidden">
         <div className="px-4 py-2">
           <h1 className="text-gray-800 font-bold text-2xl uppercase text-center">
             To-Do List
@@ -41,7 +41,7 @@ export default function App(): JSX.Element {
 
         {editIndex !== -1 ? (
           <form
-            className="w-full max-w-sm mx-auto px-4 py-2 "
+            className="w-full max-w-sm mx-auto px-4 py-2"
             onSubmit={(e) => {
               e.preventDefault();
               add();
@@ -65,11 +65,11 @@ export default function App(): JSX.Element {
           </form>
         ) : (
           <form className="w-full max-w-sm mx-auto px-4 py-2">
-            <div className="flex items-center border-b-2 border-teal-500 py-2 ">
+            <div className="flex items-center border-b-2 border-teal-500 py-2">
               <input
                 onChange={(e) => setList(e.target.value)}
                 value={list}
-                className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none "
+                className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                 type="text"
                 placeholder="Add a task"
               />
@@ -84,18 +84,18 @@ export default function App(): JSX.Element {
           </form>
         )}
 
-        <ul className="bg-gray-100 rounded block p-4 h-full items-center m-4">
+        <ul className="bg-gray-100 rounded block p-4 m-4">
           {todos.map((todo, index) => (
-            <li key={index}>
-              {todo}
+            <li key={index} className="flex items-center mb-2">
+              <span className="flex-grow">{todo}</span>
               <button
-                className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded ms-2 "
+                className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded ml-2"
                 onClick={() => change(index)}
               >
                 Edit
               </button>
               <button
-                className=" flex-shrink-0 bg-red-500 hover:bg-red-700 border-red-500 hover:border-red-700 text-sm border-4 text-white py-1 px-2 rounded ms-2"
+                className="flex-shrink-0 bg-red-500 hover:bg-red-700 border-red-500 hover:border-red-700 text-sm border-4 text-white py-1 px-2 rounded ml-2"
                 onClick={() => remove(index)}
               >
                 Delete
