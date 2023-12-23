@@ -59,17 +59,6 @@ import React, { useState } from "react";
 //   );
 // }
 
-
-
-
-
-
-
-
-
-
-
-
 export default function App() {
   const [todos, setTodos] = useState<string[]>([]);
   const [list, setList] = useState<string>("");
@@ -102,9 +91,9 @@ export default function App() {
 
   return (
     <div>
-      <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-16">
+      <div className="max-w-[1000px] mx-auto bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 shadow-lg rounded-lg overflow-hidden mt-16">
         <div className="px-4 py-2">
-          <h1 className="text-gray-800 font-bold text-2xl uppercase">
+          <h1 className="text-gray-800 font-bold text-2xl uppercase text-center">
             To-Do List
           </h1>
         </div>
@@ -158,16 +147,10 @@ export default function App() {
           {todos.map((todo, index) => (
             <li key={index}>
               {todo}
-              <button
-                className="bg-red-600 ml-2"
-                onClick={() => change(index)}
-              >
+              <button className="bg-red-600 ml-2" onClick={() => change(index)}>
                 Edit
               </button>
-              <button
-                className="bg-red-600 ml-2"
-                onClick={() => remove(index)}
-              >
+              <button className="bg-red-600 ml-2" onClick={() => remove(index)}>
                 Delete
               </button>
             </li>
