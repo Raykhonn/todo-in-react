@@ -69,7 +69,7 @@ export default function App(): JSX.Element {
               <input
                 onChange={(e) => setList(e.target.value)}
                 value={list}
-                className="appearance-none bg-transparent border-none w-full text-stone-950 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                className="appearance-none bg-transparent border-none w-full text-stone-950 mr-3 py-1 px-2 leading-tight focus:outline-none font-weight:bold"
                 type="text"
                 placeholder="Add a task"
               />
@@ -84,9 +84,9 @@ export default function App(): JSX.Element {
           </form>
         )}
 
-        <ul className="bg-gray-100 rounded block p-4 m-4">
+        <ul className="bg-gray-100 rounded block p-3 m-3 ">
           {todos.map((todo, index) => (
-            <li key={index} className="flex items-center mb-2">
+            <li key={index} className="block items-center mb-2">
               <span className="flex-grow">{todo}</span>
               <button
                 className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded ml-2"
