@@ -41,13 +41,13 @@ export default function App() {
 
         {editIndex !== -1 ? (
           <form
-            className="w-full max-w-sm mx-auto px-4 py-2"
+            className="w-full max-w-sm mx-auto px-4 py-2 "
             onSubmit={(e) => {
               e.preventDefault();
               add();
             }}
           >
-            <div className="flex items-center border-b-2 border-teal-700 py-2">
+            <div className="flex items-center border-b-2 border-blue-700 py-2">
               <input
                 onChange={(e) => setEditValue(e.target.value)}
                 value={editValue}
@@ -56,7 +56,7 @@ export default function App() {
                 placeholder="Edit task"
               />
               <button
-                className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
+                className="flex-shrink-0 bg-blue-500 hover:bg-blue-700 border-blue-500 hover:border-blue-700 text-sm border-4 text-white py-1 px-2 rounded"
                 type="submit"
               >
                 Save
@@ -65,11 +65,11 @@ export default function App() {
           </form>
         ) : (
           <form className="w-full max-w-sm mx-auto px-4 py-2">
-            <div className="flex items-center border-b-2 border-teal-500 py-2">
+            <div className="flex items-center border-b-2 border-teal-500 py-2 ">
               <input
                 onChange={(e) => setList(e.target.value)}
                 value={list}
-                className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none "
                 type="text"
                 placeholder="Add a task"
               />
@@ -84,12 +84,12 @@ export default function App() {
           </form>
         )}
 
-        <ul>
+        <ul className="bg-gray-100 rounded block p-4 h-full items-center m-4">
           {todos.map((todo, index) => (
             <li key={index}>
               {todo}
               <button
-                className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded ms-2"
+                className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded ms-2 "
                 onClick={() => change(index)}
               >
                 Edit
