@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-export default function App(): JSX.Element {
+export default function App() {
   const [todos, setTodos] = useState<string[]>([]);
   const [list, setList] = useState<string>("");
   const [editIndex, setEditIndex] = useState<number>(-1);
   const [editValue, setEditValue] = useState<string>("");
 
-  const add = (): void => {
+  const add = () => {
     if (editIndex !== -1) {
       const updatedTodos = [...todos];
       updatedTodos[editIndex] = editValue;
@@ -19,12 +19,12 @@ export default function App(): JSX.Element {
     }
   };
 
-  const change = (index: number): void => {
+  const change = (index: number) => {
     setEditIndex(index);
     setEditValue(todos[index]);
   };
 
-  const remove = (index: number): void => {
+  const remove = (index: number) => {
     const updatedTodos = [...todos];
     updatedTodos.splice(index, 1);
     setTodos(updatedTodos);
