@@ -34,7 +34,7 @@ export default function App(): JSX.Element {
     <div className="max-w-[1000px] mx-auto mt-16">
       <div className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 shadow-lg rounded-lg overflow-hidden">
         <div className="px-4 py-2">
-          <h1 className="text-gray-800 font-bold text-2xl uppercase text-center">
+          <h1 className="text-stone-800 font-bold text-2xl uppercase text-center">
             To-Do List
           </h1>
         </div>
@@ -51,7 +51,7 @@ export default function App(): JSX.Element {
               <input
                 onChange={(e) => setEditValue(e.target.value)}
                 value={editValue}
-                className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                className="appearance-none bg-transparent border-none w-full text-stone-950 mr-3 py-1 px-2 leading-tight focus:outline-none"
                 type="text"
                 placeholder="Edit task"
               />
@@ -69,7 +69,7 @@ export default function App(): JSX.Element {
               <input
                 onChange={(e) => setList(e.target.value)}
                 value={list}
-                className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                className="appearance-none bg-transparent border-none w-full text-stone-950 mr-3 py-1 px-2 leading-tight focus:outline-none"
                 type="text"
                 placeholder="Add a task"
               />
